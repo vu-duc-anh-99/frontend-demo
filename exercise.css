@@ -1,0 +1,84 @@
+html{
+    font-family: 'Roboto', sans-serif;
+    font-size: 62.5%;
+}
+img{
+    max-width: 100%;
+}
+button{
+    background-color: rgb(126, 53, 194);
+    height: 150px;
+    width: 450px;
+    font-size: 45px;
+    color: white;
+    margin-right: 145px;
+   
+}
+
+a{
+    background-color: rgb(126, 53, 194);
+    font-size: 25px;
+    color: white;
+    margin-right: 145px;
+   
+    text-decoration: none;
+}
+.link1 {
+    padding: 10px 50px;
+}
+.link2 {
+    padding: 10px 50px;
+    border-radius: 50%;
+}
+.link3 {
+    padding: 10px 50px;
+    border-radius: 10px;
+}
+a:hover{
+    background-color: aqua;
+}
+.round_cornes{
+    border-radius: 50%;
+}
+.rounded_cornes{
+    border-radius: 10px;
+}
+.box{
+    width: 20rem;
+    height: 30rem;
+    background-color: #ffa400;
+    color: black;
+    border: 4px solid yellow;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 4px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.bai23 {
+    width: 500px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.bai4{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("https://uploadstatic-sea.mihoyo.com/contentweb/20210527/2021052717263594739.png");
+   
+    background-repeat: no-repeat;
+    background-position: center right;
+    
+}
+
+
+.img_bai5 {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    /* chưax hình bị méo */
+    object-fit: cover;
+    border-radius: 50%;
+}

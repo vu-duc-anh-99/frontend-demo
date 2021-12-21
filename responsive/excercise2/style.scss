@@ -1,0 +1,110 @@
+@mixin flexbox(
+  $align: flex-start,
+  $justify: flex-start,
+  $flex_direction: row,
+  $wrap: nowarp
+) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $flex_direction;
+  flex-wrap: $wrap;
+}
+html {
+  font-size: 62.5%;
+}
+.post {
+  &__list {
+    padding: 2rem;
+    @include flexbox(stretch);
+    margin-left: -2rem;
+  }
+  &__item {
+    margin-left: 2rem;
+    width: calc(33.33% - 2rem);
+  }
+  &__img{
+    width: 100%;
+    height: 40rem;
+    object-fit: cover;
+  }
+  &__author{
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    background-color: #eee;
+  }
+  &__content{
+    padding: 1.5rem;
+    border: 2px solid #eee;
+    height: calc(100% - 40rem);
+    @include flexbox(flex-start,space-between,column)
+  }
+  &__title{
+    font-size: 2.5rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+  }
+
+  
+  
+}
+@media screen and (max-width: 1439px) {
+  .post {
+    &__list{
+      @include flexbox(stretch,flex-start,row ,wrap)
+    }
+    &__item {
+      margin-left: 2rem;
+      width: calc(50% - 2rem);
+      margin-bottom: 5rem;
+    }
+    &__img {
+      width: 100%;
+      height: 30rem;
+    }
+    &__content {
+      padding: 1rem;
+      height: calc(100% - 30rem);
+    }
+    &__author {
+      width: 7rem;
+      height: 7rem;
+    }
+    &__title{
+      font-size: 2rem;
+      line-height: 1.4;
+      margin-bottom: 1.2rem;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .post {
+    &__list {
+      margin-left: 0;
+      padding: 2rem;
+      flex-direction: column;
+    }
+    &__item {
+      margin-left: 0;
+      width: 100%;
+      margin-bottom: 5rem;
+    }
+    &__img {
+      width: 100%;
+      height: 20rem;
+    }
+    &__content {
+      padding: 1rem;
+    }
+    &__author {
+      width: 6rem;
+      height: 6rem;
+    }
+    &__title{
+      font-size: 1.5rem;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+  }
+}

@@ -1,0 +1,200 @@
+:root{
+    --gradient-color: rgba(0, 47, 255, 0.651);
+}
+html{
+    font-size: 62.5%;
+}
+a{
+    font-size: 2rem;
+}
+.gradient{
+    --gradient-color: rgba(209, 36, 195, 0.89);
+    width: 20rem;
+    height: 20rem;
+    background-image: linear-gradient(to right bottom, var(--gradient-color), blue);
+    /* 
+        to right: trái -> phải
+        to right bottom: trái trên -> phải dưới
+    */
+
+    cursor: pointer;
+    /* 
+        Khi di chuột vào hiện con trỏ chuột
+    */
+
+    opacity: 0;
+    /* 
+        Mặc định là 1, để 0 vẫn sẽ chiếm diện tích nhưng không hiện hình
+    */
+   
+    /* 
+        visibility: hidden;
+        
+        Vẫn sẽ chiếm diện tích nhưng k bấm vào được
+    */
+    
+    /* 
+        display: none;
+        Biến mất hoàn toàn 
+    */
+}
+.title{
+    font-size: 3rem;
+    background-image: linear-gradient(to right,var( --gradient-color ),rgb(18, 156, 126));
+    display: inline-block;
+    color: blue;
+
+}
+@supports(-webkit-background-clip: text){
+    .title{
+        font-size: 3rem;
+        background-image: linear-gradient(to right,var( --gradient-color ),rgb(18, 156, 126));
+        display: inline-block;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+    
+    }
+}
+.gradient_image{
+    width: 50vw;
+    height: 50vh;
+    background-image:  linear-gradient(to right,var( --gradient-color ),rgba(42, 238, 195, 0.589)),
+                       url("https://i.ytimg.com/vi/FVx59vDV2I4/maxresdefault.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+.shadow{
+    width: 10rem;
+    height: 10rem;
+    margin: 5rem auto;
+    background-color: blue;
+    box-shadow: 11px -1px 35px 5px rgb(33 142 161);
+    /* box-shadow: inset 11px -1px 10px 5px rgb(33 142 161); */
+    /* 
+        x , y , scale, color
+        x,y tính bằng trục tọa độ mặc định x, y = 0
+        scale càng cao càng mờ mặc định = 0
+
+    */
+}
+
+.shadow-text{
+    font-size: 3rem;
+    text-shadow: 11px -1px 5px rgb(33 142 161);
+    /* text shadow không có scale */
+}
+h2.shadow-text{
+    text-shadow: 11px -1px 5px red;
+    
+}
+
+/* 
+    ĐỘ ƯU TIÊN CSS 
+    --cùng cấp thì chạy cái dưới cùng
+    -- id > class > tags
+    -- dùng !important sẽ đè toàn bộ -- hạn chế sử dụng
+    .title < tags.title
+    -- nếu dùng thẳng style trong file html sẽ sẽ lấy theo style
+        nhưng vẫn < !important
+
+     khi di chuột vào biến có hiện 3 số x y z 
+     x y z tương ứng id, class hoặc attribute, tags
+     ưu tiên theo x y z
+     vd: 1 0 0 > 0 1 1
+*/
+ul{
+    font-size: 3rem;
+}
+li:first-child{
+    background-image: linear-gradient(to right,rgba(45, 212, 212, 0.719),rgba(20, 36, 182, 0.76));
+}
+li:last-child{
+    text-shadow: 20px 0px 3px rgb(202 51 51 / 79%);
+}
+li:nth-child(3){
+    background-image: linear-gradient(to right,rgba(45, 212, 212, 0.719),rgba(231, 60, 203, 0.692));
+}
+li:nth-last-child(2){
+    display: inline-block;
+    background-image: linear-gradient(to right, rgba(81, 236, 236, 0.849), rgba(221, 235, 96, 0.884));
+}
+li:not(:first-child){
+    background-image: linear-gradient(to right, rgba(81, 236, 236, 0.849), rgba(221, 235, 96, 0.884));
+    display: block;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+li:nth-child(odd){
+    color: blue;
+    /* số chẵn */
+}
+li:nth-child(even){
+    color: blueviolet;
+    /* số lẻ */
+}
+li:nth-child(2n+1){
+    color: burlywood;
+}
+li:first-of-type{
+    color: chartreuse;
+    /* nếu dùng first child thì thẻ bên index sẽ chiếm vị trí first child -> sai */
+}
+li:nth-last-of-type(3) span{
+    background-image: linear-gradient(to right, rgba(58, 212, 127, 0.849), rgba(35, 32, 223, 0.884));
+    display: inline-block;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+h3 + .title{
+    color: darkblue;
+    /* + . để liền kề cùng cấp nếu không liền nhau sẽ sai */
+}
+h3 ~.title2{
+    font-size: 4rem;
+    /* chỉ cần cùng cấp k cần liền kề */
+}
+a[href^="http"]{
+    color: red;
+    /* 
+        $= kết thức bằng
+        *= có chứa
+    */
+}
+
+/* 
+div[data-title="value"]{
+
+} 
+*/
+p::first-letter{
+    color: red;
+    font-size: 1rem;
+}
+.wrap{
+    width: 10rem;
+    height: 10rem;
+}
+.wrap:hover .box{
+    display: inline-block;
+}
+.box{
+    width: 20rem;
+    height: 20rem;
+    font-size: 3rem;
+    display: none;
+    background-color: aqua;
+    transition: background-color 2s linear, color 1s linear;
+    /* transition: all 2s linear */
+    transition-delay: 2s;
+    /* transition: property (width, height, bgc,...), time(second), easing */
+}
+.box:hover{
+    background-color: blue;
+    color: chartreuse;
+}
+
+/* nên sử dụng opacity 0 1 chứ k nên dùng display none */

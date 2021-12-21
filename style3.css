@@ -1,0 +1,114 @@
+html{
+    font-size: 62.5%;
+}
+p{
+    font-size: 2rem;
+}
+.box{
+    width: 10rem;
+    height: 10rem;
+    background-color: red;
+    margin: 3rem;
+    font-size: 2rem;
+    /* transform: scaleX(2) scaleY(3); */
+    /* phóng to nhưng block vẫn chỉ trong khoảng đã định */
+    /* transform:  rotateZ(-20deg); */
+    /* transform: rotate(20deg); */
+    /* có thể  khi giá trị âm  */
+    
+    /* 
+        dịch qua trái 1 khoảng = block
+        transform: translateX(100%);
+
+        --chính giữa
+        transform: translate(-50%,-50%);
+    */
+    
+    /* 
+        transform: skewY(30deg);
+    */
+}
+
+.relative{
+    width: 15rem;
+    height: 15rem;
+    font-size: 2rem;
+    background-color: red;
+    position: relative;
+    top: -3rem;
+    left: 5rem;
+    /* Tương tự transform: scale */
+}
+.relative:hover{
+    background-color: aqua;
+}
+.absolute{
+    width: 50vw;
+    height: 50vh;
+    background-color: black;
+    font-size: 3rem;
+    color: white;
+    position: relative;
+    z-index: 4;
+}
+.box2{
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    /* so sánh với thằng cha chứa nó có position */
+    /* Không còn chiếm vị trí */
+    position: absolute;
+
+    /* căn giữa chiều ngang  */
+    /* left: 50%;
+    transform: translateX(-50%); */
+
+    /* căn giữa chiều dọc */
+    /* top: 50%;
+    transform: translateY(-50%); */
+
+    /* top:50%;
+    left:50%;
+    transform: translate(-50%,-50%); */
+
+    /* phủ toàn khối */
+    /* top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: auto;
+    width: auto; */
+
+    /* phủ hết ngang */
+    /* left:0;
+    right: 0;
+    width: auto; */
+
+    /* 
+        z-index: ; 
+        --Chỉ chạy so với thằng cha hoặc cùng cấp khi có position
+        --To hơn ở trên
+    */
+    z-index: 2;
+}
+/* .text-in-absolute{
+    position: relative;
+    z-index: 3;
+} */
+.header{
+    background-color: blue;
+    width: 100%;
+    position: fixed;
+    /* 
+        --fixed chỉ chạy theo body 
+        --không nên dùng fixed trong thằng cha có chứa tranform
+    */
+    
+    top:2rem;
+    left: 0;
+    height: 10rem;
+}
+body{
+    height: 300rem;
+    padding: 5rem;
+}

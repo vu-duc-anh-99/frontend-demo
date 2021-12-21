@@ -1,0 +1,76 @@
+html{
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.box{
+    width: 20rem;
+    height: 30rem;
+    font-size: 2rem;
+    color: black;
+    border: yellow 2px solid;
+    background-color: #ffa400;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.bai4{
+    width: 50vw;
+    height: 50vh;
+    background-image: url("https://uploadstatic-sea.mihoyo.com/contentweb/20210527/2021052718163868290.png");
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+}
+.bai5{
+  
+    
+
+}
+.img{
+    display: block;
+    width: 40rem;
+    height: 40rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+a{
+    font-size: 3rem;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    margin: 3rem 5rem;
+    padding: 5rem 10rem;
+    background-color: violet;
+}
+
+.round{
+    border-radius: 1rem;
+}
+.rounded{
+    border-radius: 6rem;
+}
+a:hover{
+    color: blue;
+    background-color: green;
+}
+.text3{
+    font-size: 2rem;
+    max-width: 50rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    /* Theo chiều dọc */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.text1{
+    white-space: nowrap;
+    max-width: 10rem;
+    overflow:hidden;
+    color: green;
+    font-size: 2rem;
+    text-overflow: ellipsis;
+}

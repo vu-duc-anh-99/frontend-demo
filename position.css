@@ -1,0 +1,93 @@
+html{
+    font-size: 62.5%;
+}
+body{
+    width: 100%;
+    height: 100vh;
+}
+.modal{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: #0F0E0F;
+    
+}
+.modal__content{
+    width: 90%;
+    height: 50%;
+    background-color: white;
+    padding: 5rem;
+    position: absolute;
+    font-size: 2rem;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.modal__video{
+    background-image: linear-gradient(to right bottom,#3883E5,#6EA3E5);
+    width: 60%;
+    height: 80%;
+    position: absolute;
+    background-size: cover;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.img_video{
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    position: relative;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.video_icon{
+    position: absolute;
+    font-size: 4rem;
+    color: white;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.sale{
+    font-size: 1.5rem;
+    padding: 5px;
+    color: white;
+    background-color: #E59300;
+    border-radius: 1rem;
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    
+
+}
+.bar{
+    width: 40rem;
+    height: 1.5rem;
+    background-color: #ccc;
+    margin: 5rem auto;
+    border-radius: 5rem;
+    position: relative;
+}
+.bar-process{
+    width: 20rem;
+    height: 100%;
+    background-color: green;
+    /* kế thừa radius */
+    border-radius: inherit;
+    position: relative;
+}
+.bar-circle{
+    width: 2rem;
+    height: 130%;
+    background-color: blue;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+}

@@ -1,0 +1,110 @@
+html {
+  font-size: 62.5%;
+}
+ul li {
+  font-size: 2.5rem;
+  margin-left: 10rem;
+  margin-bottom: 0.9rem;
+}
+
+.btn {
+  width: 20rem;
+  height: 5rem;
+  margin: 10rem 5rem;
+  font-weight: bold;
+  color: white;
+  border-radius: 5px;
+  border: none;
+}
+.btn--green {
+  background-image: linear-gradient(
+    to right,
+    rgba(73, 226, 167, 0.829),
+    rgba(81, 215, 224, 0.884)
+  );
+  box-shadow: 0px 9px 20px rgb(73 226 167 / 83%);
+}
+.btn--blue {
+  background-image: linear-gradient(to right, #ade5ff, #71b6ed);
+  box-shadow: 0px 9px 20px #ade5ff;
+}
+.btn--purple {
+  background-image: linear-gradient(
+    to right,
+    rgba(131, 110, 223, 0.829),
+    rgba(94, 39, 224, 0.884)
+  );
+  box-shadow: 0px 9px 20px rgba(131, 110, 223, 0.829);
+}
+.btn--orange {
+  background-image: linear-gradient(
+    to right,
+    rgba(243, 201, 152, 0.829),
+    rgba(235, 165, 75, 0.884)
+  );
+  box-shadow: 0px 9px 20px rgba(243, 201, 152, 0.829);
+}
+.btn--red {
+  background-image: linear-gradient(
+    to right,
+    rgba(224, 166, 158, 0.829),
+    rgba(214, 91, 91, 0.884)
+  );
+  box-shadow: 0px 9px 20px rgba(224, 166, 158, 0.829);
+}
+.btn--pink {
+  background-image: linear-gradient(
+    to right,
+    rgba(231, 170, 231, 0.829),
+    rgba(226, 110, 226, 0.884)
+  );
+  box-shadow: 0px 9px 20px rgba(231, 170, 231, 0.829);
+}
+
+.color_item:not(:last-child) {
+  color: blue;
+}
+.color_item:first-child {
+  color: rgb(163, 28, 180);
+}
+.color_item:nth-of-type(2) {
+  color: rgb(105, 228, 170);
+}
+.color_item:nth-last-of-type(3) {
+  color: silver;
+}
+.color_item {
+  transition: background-color 2s linear;
+}
+.color_item:hover {
+  color: aqua;
+  background-color: aquamarine;
+}
+
+.bai-5 {
+  font-size: 2rem;
+}
+
+div[data-link^="https"] {
+  color: red;
+}
+div[data-link$=".vn"] {
+  color: aqua;
+}
+input[type="email"] {
+  background-color: blue;
+}
+.text-gradient {
+  margin-top: 5rem;
+  display: inline-block;
+  font-size: 5rem;
+  font-weight: bold;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(
+    to right bottom,
+    rgb(236, 185, 89),
+    rgb(224, 86, 206)
+  );
+}

@@ -1,0 +1,53 @@
+html{
+    font-size: 62.5%;
+}
+
+ul li {
+    width: 10rem;
+    height: 10rem;
+    font-size: 2rem;
+}
+li:first-child{
+    background-color: red;
+}
+li:nth-last-child(2){
+    background-color: aqua;
+}
+a{
+    font-size: 2rem;
+}
+div[data-link^="https"]{
+    background-color: tomato;
+}
+
+.btn{
+    padding: 4rem 12rem;
+    display: inline-block;
+    margin: 10rem 5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    border-radius: 4px;
+    color: white;
+}
+.btn.btn-success {
+    background-image: linear-gradient(to right, #68ECAC,#4FCCC7);
+    box-shadow: 0px 9px 20px #68ECAC;
+}
+.btn.btn-information{
+
+    background-image: linear-gradient(to right, #68ECAC,#4FCCC7);
+    box-shadow: 0px 9px 20px #68ECAC;
+    border: none;
+}
+.bai2{
+    text-align: center;
+    font-size: 5rem;
+    font-weight: bold;
+    letter-spacing: 4px;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(to right bottom,#0400f0,red);
+    text-shadow: 0px 9px 20px #68ECAC;
+}

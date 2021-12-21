@@ -1,0 +1,36 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2rem;
+}
+
+.header-top-text {
+  color: #ffa400;
+}
+.header-top-text:hover {
+  animation: top-text 2s forwards linear;
+}
+
+@keyframes top-text {
+  to {
+    color: aqua;
+  }
+}
+.box {
+  width: 80rem;
+  height: 20rem;
+  background-color: red;
+  position: relative;
+}
+.box .boxing {
+  width: 20rem;
+  height: 10rem;
+  background-color: aqua;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/*# sourceMappingURL=style.css.map */

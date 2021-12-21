@@ -1,0 +1,226 @@
+html{
+    font-size: 62.5%;
+}
+*{
+    box-sizing: border-box;
+}
+p{
+    color: rgba(0,0,0,0.6);
+}
+body{
+      /* sans-serif --> chữ k gạch chân */
+    font-family: 'Poppins', sans-serif;
+   
+    font-size: 1.6rem;
+
+    /* bình thường là 400 */
+    font-weight: 300;
+
+   
+}
+
+
+
+.background{
+    background-color: aqua;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+}
+
+.background2{
+    background-color: aqua;
+    min-width: 100px;
+    max-width: 50%;
+    height: 100px;
+    overflow-y: auto;
+}
+.background3{
+    /* background-image: url("https://images.unsplash.com/photo-1623860907911-4b9ed5f557fc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80");
+    width: 100%;
+    height:900px;
+    không lặp lại
+    background-repeat: no-repeat;
+    
+    --phủ hết width và height
+    --vd: Nếu ảnh nhỏ sẽ phóng to 
+    background-size: cover; 
+        
+    --chỉnh ra giữa ảnh
+    background-position: center center;
+
+    --giữ nguyên ảnh khi cuộn chuột
+    --làm mất tác dụng của bgs: cover
+    background-attachment: fixed; 
+    
+    width: 100% = 100% của thằng cha
+    width :100vw = 100% của màn hình
+    */
+
+    
+    width: 50vw;
+    height:50vh;
+    background: red url("https://images.unsplash.com/photo-1623860907911-4b9ed5f557fc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80")
+    no-repeat center center / cover;
+}
+
+/* do reset css => fontsize = 16px => 1em = 1rem = 16px */
+.em {
+    width: 10em;
+    height: 10em;
+    background-color: orange;
+    font-size: 32px; 
+    /* em phụ thuộc vào font-size của chính nó hoặc phần tử chứa nó */
+}
+.rem{
+    width: 10rem;
+    height: 10rem;
+    background-color: red;
+    /* border-radius: 20px 30px 50px 90px; */
+    border-top-left-radius: 20px 50px;
+    /* border-radius: 50%;
+    -->hình tròn */
+    /* em phụ thuộc vào font-size của thẻ html */
+    /* 16px = 100% */
+
+}
+
+
+.margin{
+    width: 20rem;
+    height: 20rem;
+    background-color: red;
+    margin :20px;
+    
+    /* -- t = r = b = l 
+    margin: 20px;
+
+    -- t = b = 20px --- l = r = 40px
+    margin: 20px 40px;
+
+    -- t = 10, r= l = 20, b = 30
+    margin: 10px 20px 30px; 
+
+    -- sát lề phải
+    margin-left: auto;
+    
+
+    --center
+    margin-left: auto;
+    margin-right: auto;
+    */
+
+    
+}
+
+.margin2 {
+    margin-top: 90px;
+    /*   margin collapse 
+    nếu 2 block liền nhau có cả margin-bottom và margin-top
+    thì sẽ lấy giá trị lớn hơn
+    */
+}
+.padding{
+    width: 10rem;
+    height: 10rem;
+    background-color: red;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 10px;
+
+}
+.boxed{
+    width: 10rem;
+    height: 10rem;
+    background-color: orange;
+    padding: 1rem;
+    border: 5px solid black;
+    
+    /* 
+        ***box-sizing: content-box; --> nên để box-sizing cho toàn bộ trang web
+
+        --total_width = width + padding_left + padding_right 
+            + border_left + border_right
+
+        --total_height = height + padding_top + padding_bottom 
+            + border_top + border_bottom
+        
+            ex: 100 + 10 +10 + 5+ 5 = 130
+
+
+        ***box-sizing: border-box;
+
+        --width = width - padding_left - padding_right 
+            - border_left - border_right
+
+        --height = height - padding_top - padding_bottom 
+            - border_top - border_bottom
+
+            ex: 100 - 10 -10 -5 -5 =70
+    */
+}
+
+.abc a {
+    width: 10rem;
+    height: 10rem;
+    margin: 2rem;
+    background-color: yellow;
+    display: block;
+}
+
+.font {
+    /* Khoảng cách dòng trên và dưới */
+    line-height: 1.5;
+    max-width: 300px;
+    
+
+    word-break: break-word;
+
+    /* khoảng cách giữa các ký tự */
+    /* letter-spacing: 5px; */
+    
+    /* 
+        Khoảng cách giữa các từ
+        word-spacing: 100px;
+    */
+    
+    /* 
+        --nowrap để không xuống dòng ellipsis để hiện ...
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    */
+
+}
+.imgt {
+    width: 300px;
+    text-align: center;
+    
+}
+
+.image {
+    width: 20rem;
+    height: 20rem;
+    /* tránh hình bị méo */
+    object-fit: cover;
+
+    /* lấy ảnh từ trên xuống */
+    /* object-position: top; */
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.pseudo{
+    color: black;
+    font-size: 3rem;
+}
+.pseudo:hover{
+    color: blue;
+}
+
+/* 
+    Nhấn đổi màu
+    .pseudo:active{
+        color: blue;
+    }
+*/

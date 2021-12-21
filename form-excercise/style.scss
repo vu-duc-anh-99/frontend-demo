@@ -1,0 +1,344 @@
+html {
+  font-size: 62.5%;
+}
+$primary-color: #fa4c53;
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+body {
+  background-color: #ccc;
+  font-size: 2rem;
+  padding: 7rem;
+}
+.signup {
+  border-radius: 1rem;
+  box-shadow: 0 0 5px red;
+  width: 100%;
+  height: 100%;
+  padding: 5rem;
+  background-color: #f3f7ff;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 0 10px 5px rgba(black, 0.3);
+  &__content,
+  &__image {
+    width: calc(50% - 4rem);
+  }
+  &__image {
+    &-item {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__heading {
+    font-weight: bold;
+    font-size: 4rem;
+    color: #291667;
+    margin-bottom: 3rem;
+  }
+  &__caption {
+    color: $primary-color;
+    margin-bottom: 4rem;
+    font-weight: bold;
+    position: relative;
+    padding-left: 12rem;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 9rem;
+      height: 0.2rem;
+      background-color: $primary-color;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+  }
+  &__social {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6rem;
+    &-item {
+      display: flex;
+      width: calc(50% - 2rem);
+      padding: 1.5rem 2.5rem;
+      border: 1px solid #ccc;
+      border-radius: 1rem;
+      justify-content: center;
+      align-items: center;
+    }
+    &-icon {
+      margin-right: 3rem;
+    }
+  }
+
+  &-form {
+    &__label {
+      display: block;
+      margin-bottom: 1.5rem;
+      cursor: pointer;
+      margin-left: 1.5rem;
+    }
+    &__input {
+      padding: 1.5rem 2.5rem;
+      border: 1px solid #ccc;
+      background-color: rgba(#ccc, 0.1);
+      border-radius: 1rem;
+      font-size: 1.5rem;
+      width: 100%;
+      outline: none;
+      &:focus {
+        background-color: white;
+        border-color: $primary-color;
+        & + .signup-form__check-icon {
+          background-color: $primary-color;
+          color: white;
+        }
+      }
+    }
+    &__term {
+      margin-top: 3rem;
+      margin-bottom: 5rem;
+    }
+    &__checkbox {
+      display: none;
+    }
+    &__submit {
+      width: 7rem;
+      height: 7rem;
+      border-radius: 2rem;
+      border: 1px solid $primary-color;
+      background-color: $primary-color;
+      font-size: 2.5rem;
+      color: white;
+      cursor: pointer;
+      margin-bottom: 6rem;
+      box-shadow: 0 10px 10px 0 rgba($primary-color, 0.3);
+    }
+    &__check {
+      position: relative;
+      .signup-form__input {
+        padding-right: 6rem;
+        &:focus {
+        }
+      }
+      &-icon {
+        width: 3rem;
+        height: 3rem;
+        background-color: #ccc;
+        border-radius: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 2rem;
+      }
+    }
+    &__item {
+      width: 100%;
+    }
+  }
+  &__input {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-bottom: 2.5rem;
+    .signup-form__item {
+      width: calc(50% - 2rem);
+    }
+  }
+
+  &-checkbox {
+    display: none;
+    &:checked + &__label:before {
+      background-color: $primary-color;
+    }
+    &:checked + &__label:after {
+      visibility: inherit;
+      opacity: 1;
+    }
+    &__label {
+      position: relative;
+      padding-left: 4.5rem;
+      display: block;
+      cursor: pointer;
+      &:before {
+        content: "";
+        position: absolute;
+        width: 3rem;
+        height: 3rem;
+        border: 1px solid #ccc;
+        border-radius: 0.7rem;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        width: 1.8rem;
+        height: 0.6rem;
+        top: 0.5rem;
+        left: 0.6rem;
+        border-bottom: 2.5px solid white;
+        border-left: 2.5px solid white;
+        transform: rotate(-45deg);
+        transition: all 0.25 linear;
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+  &__already {
+    a {
+      color: $primary-color;
+    }
+  }
+}
+@media screen and (max-width: 1439px) {
+  body {
+    height: 100vh;
+  }
+  .signup {
+    &__content {
+      width: calc(60% - 3rem);
+    }
+    &__image {
+      width: calc(40% - 3rem);
+    }
+  }
+}
+@media screen and (max-width: 1279px) {
+  body {
+    padding: 15rem;
+    height: 100%;
+  }
+  .signup {
+    padding: 3rem;
+    flex-direction: column;
+    &__content {
+      width: 100%;
+    }
+    &__image {
+      display: none;
+    }
+    &__social {
+      margin-bottom: 4rem;
+    }
+    &-form {
+      &__submit {
+        width: 6rem;
+        height: 6rem;
+        margin-bottom: 4rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  body {
+    padding: 3rem;
+    height: 100vh;
+  }
+  .signup {
+    padding: 2rem;
+    &__heading {
+      margin-bottom: 2rem;
+    }
+    &__social {
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    padding: 2rem;
+  }
+  .signup {
+    padding: 1.5rem;
+    flex-direction: column;
+    &__heading {
+      margin-bottom: 2rem;
+    }
+    &__social {
+      margin-bottom: 3rem;
+    }
+    &-form {
+      &__submit {
+        width: 6rem;
+        height: 6rem;
+        margin-bottom: 4rem;
+      }
+    }
+    &-checkbox {
+      &__label {
+        &:after {
+          top: 1.2rem;
+          width: 1.6rem;
+          height: 0.6rem;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 479px) {
+  body {
+    padding: 2rem;
+    height: 100%;
+    font-size: 1.5rem;
+  }
+  .signup {
+    padding: 1.5rem;
+    flex-direction: column;
+    &__heading {
+      margin-bottom: 2rem;
+    }
+    &__social {
+      margin-bottom: 3rem;
+      flex-direction: column;
+      &-item {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+    }
+    &-form {
+      &__submit {
+        width: 5rem;
+        height: 5rem;
+        margin-bottom: 3rem;
+      }
+      &__term {
+        margin-top: 2.5rem;
+        margin-bottom: 3rem;
+      }
+    }
+    &__input {
+      flex-direction: column;
+      margin-bottom: 0;
+      .signup-form__item {
+        width: 100%;
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    &-checkbox {
+      &__label {
+        &:before {
+          width: 2.5rem;
+          height: 2.5rem;
+        }
+        &:after {
+          top: 0.9rem;
+          width: 1.4rem;
+          height: 0.5rem;
+        }
+      }
+    }
+  }
+}

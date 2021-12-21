@@ -1,0 +1,60 @@
+$primary-color: #ffa400;
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2rem;
+}
+
+.header {
+  &-top {
+    &-text {
+      color: $primary-color;
+      &:hover {
+        animation: top-text 2s forwards linear;
+      }
+    }
+  }
+}
+@keyframes top-text {
+ 
+    to{
+        color: aqua;
+    }
+}
+
+@mixin size($w,$h) {
+  width: $w *2;
+  height: $h;
+}
+
+// @mixin size($w,$h:10rem) {
+  
+  //Nếu không truyền vào height thì mặc định lấy 10rem
+
+// }
+@mixin absoluteCenter($direction: "left") {
+  @if $direction == "left" {
+    left:50%;
+  transform: translateX(-50%);
+  }
+  @if $direction == "center"{
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+  }
+
+}
+.box{
+  @include size(40rem,20rem);
+  background-color: red;
+  position: relative;
+  .boxing{
+    @include size(10rem,10rem);
+    background-color: aqua;
+    position: absolute;
+    @include absoluteCenter("left");
+  }
+}
+

@@ -1,0 +1,87 @@
+$blue-color: #348de5;
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: #b3bbce;
+}
+.dropdown {
+  font-size: 2rem;
+  width: 40rem;
+  margin: 2rem auto 0;
+  position: relative;
+  /* top 2 left right auto bot 0 */
+  .dropdown_select {
+    padding: 2.5rem 4rem 2rem 2rem;
+    background-image: linear-gradient(to right, $blue-color, aqua);
+    color: white;
+    display: flex;
+  }
+  &_text,
+  .text {
+    margin-left: 3.5rem;
+  }
+  &__caret {
+    color: red;
+    margin-left: auto;
+  }
+  &__list {
+    border-radius: 5px;
+    margin-top: 3rem;
+    top: 100%;
+    width: 100%;
+    box-shadow: 0 0 1rem 0 rgb(black, 0.2);
+    background-color: white;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s linear;
+    &:before {
+      content: "";
+      @include size(0);
+      position: absolute;
+      border: 1rem solid white;
+      right: 3.4rem;
+      transform: translateY(-50%) rotate(45deg);
+      z-index: -1;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: translateY(-100%);
+      width: 100%;
+      height: 3rem;
+      background-color: transparent;
+    }
+  }
+  &:hover {
+    .dropdown__list {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.item {
+  padding: 2.5rem 4rem 2rem 2rem;
+  display: flex;
+  align-items: center;
+  color: #b3bbce;
+  transition: color 0.5s linear;
+  cursor: pointer;
+  border-left: 4px solid transparent;
+  /* set trước border-left để khi hover chỉ đổi màu mà không bị thụt vào */
+  &:not(:last-child) {
+    border-bottom: 2px solid #eee;
+  }
+  &:hover {
+    color: #74809d;
+    border-left-color: $blue-color;
+  }
+}

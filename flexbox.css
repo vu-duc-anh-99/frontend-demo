@@ -1,0 +1,79 @@
+html{
+    font-size: 62.5%;
+}
+
+.flex-box{
+    margin-top: 5rem;
+    display: flex;
+    font-size: 2rem;
+  
+
+    /* Mặc định */
+    flex-direction: row;
+
+    /* Ngược lại */
+    /* flex-direction: row-reverse; */
+
+    /* làm các cột cao bằng nhau và bằng cột cao nhất -- Mặc định */
+    align-items: stretch;
+
+    /* Chỉ bao phủ toàn bộ nội dung */
+    /* align-items: flex-start; */
+
+    /* Chỉ bao phủ toàn bộ nội dung và căn theo dưới cùng */
+    /* align-items: flex-end; */
+
+    /* center thì căn giữa */
+
+    /* Căn theo đít chữ dòng đầu tiên */
+    /* align-items: baseline; */
+
+    /* Mặc định -- nằm bên trái */
+    justify-content: flex-center;
+    
+    /* justify-content: center;
+    justify-content: flex-end; */
+    
+    /* Tạo khoảng trống chia đều giữa các phần tử */
+    /* justify-content: space-between; */
+
+    /* justify-content: space-around; */
+
+    /* khoảng trống 2 bên bằng nhau */
+    /* justify-content: space-evenly; */
+
+     /* Không xuống dòng -- Mặc định*/
+     /* flex-wrap: nowarp; */
+
+}
+.flex-item{
+    background-color: violet;
+    margin: 0 1rem;
+    padding: 2rem;
+}
+.flex-item:first-child{
+    /* font-size: 6rem; */
+}
+.flex-item:last-child{
+    /* 1 mình */
+    /* align-self: flex-end; */
+}
+.layout{
+    margin: 5rem;
+    display: flex;
+}
+.icon{
+    color: aqua;
+    font-size: 2rem;
+    width: 10rem;
+    height: 10rem;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.layout p {
+    --value: 100rem;
+    width: calc(100% - var(--value));
+}
